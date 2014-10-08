@@ -1,0 +1,57 @@
+/*reset.css*/
+body,
+ul,
+p,
+h1,h2,h3,h4,h5,h6
+{
+	padding: 0;
+	margin: 0;
+}
+
+ul
+{
+	list-style: none;
+}
+
+a
+{
+	text-decoration: none;
+	background: transparent;
+}
+
+a:visited,
+a:active,
+a:hover
+{
+	outline: 0;
+	text-decoration: none;
+}
+
+
+	/*Display fix voor oudere browsers*/
+	article,
+	aside,
+	details,
+	figcaption,
+	figure,
+	footer,
+	header,
+	hgroup,
+	main,
+	nav,
+	section,
+	summary 
+	{
+	 	display: block;
+	}
+
+	audio,
+	canvas,
+	progress,
+	video
+	{
+		display: inline-block;
+		vertical-align: baseline;
+	}
+	/*-----*/
+/*-----*/
