@@ -1,3 +1,8 @@
+body
+{
+	min-height: 100vh;
+}
+
 html
 {
 	font-family: 'Open Sans', sans-serif;
@@ -157,7 +162,8 @@ header ul
 
 /* Media Queries */
 
-@media (max-width: 960px)
+@media (max-width: 960px),
+(max-device-width: 960px)
 {
 	html
 	{
@@ -171,16 +177,24 @@ header ul
 	}
 }
 
-@media (max-width: 480px)
+@media (max-width: 480px),
+(max-device-width: 480px)
 {
 	#topheader
 	{
-		position: inherit;
+		position: static;
 	}
 
 	#topheader ul
 	{
 		display: block;
+	}
+
+	.navigation
+	{
+		padding: 0;
+		margin: 0;
+		margin-right: 0;
 	}
 
 	.navigation .navbutton:nth-child(odd)
@@ -206,6 +220,13 @@ header ul
 
 	.container
 	{
+		height: inherit;
 		padding: 0;
+	}
+
+	#bottomfooter
+	{
+		border-top: 2px solid gray;
+		position: static;
 	}
 }
