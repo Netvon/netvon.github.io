@@ -1,0 +1,9 @@
+nav
+{
+	background-color: gray;
+}
+
+nav > ul
+{
+	display: flex;
+}
