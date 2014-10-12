@@ -1,17 +1,24 @@
 body
-{
-	min-height: 100vh;
+{/*
+	min-height: 100vh;*/
+	line-height: 3.2rem;
 }
 
 html
 {
 	font-family: 'Open Sans', sans-serif;
+
 	color: rgb(90, 90, 90);
 	background: url(../images/sunrays.png) no-repeat center center fixed; 
 	-webkit-background-size: cover;
 	-moz-background-size: cover;
 	-o-background-size: cover;
 	background-size: cover;
+}
+
+p
+{
+	margin-bottom: 2.4rem;
 }
 
 /* Hier zit alles in de Header */
@@ -51,7 +58,7 @@ header ul
 	/*width: 100%;*/
 	flex: 1;
 	color: #fff;
-	font-size: 1.6rem;
+	font-size: 1.8rem;
 	/*margin-right: -4px;
 	vertical-align: middle;
 	line-height: 75px;
@@ -60,10 +67,10 @@ header ul
 
 .navbutton a
 {
-	transition: all 0.2s ease;
+	transition: background-color 0.2s ease;
 	/*min-height: 75px;*/
 	width: 100%;
-	min-height: 75px;
+	height: 100%;
 	color: white;
 }
 
@@ -73,6 +80,7 @@ header ul
 }
 .navbutton > a:hover
 {
+	font-weight: 700;
 	background-color: #707070;
 }
 .navbutton > a:active
@@ -118,9 +126,10 @@ header ul
 /* Hier zit alles in de body */
 .container
 {
-	height: 100vh;
-	max-width: 980px;
-	margin: auto;
+	min-height: 100vh;
+	max-width: 940px;
+	margin: 0 auto 0;
+	overflow-x: hidden;
 	padding: 74px 10px 40px 10px;
 	background-color: white;
 }
@@ -136,13 +145,13 @@ header ul
 {
 	font-size: 4.8rem;
 	font-weight: 300;
-	margin: 12px 0 12px 0;
+	margin: 24px 0 24px 0;
 }
 
 .container > article p
 {
 	font-size: 1.6rem;
-	line-height: 2.4rem;
+	
 }
 /*===============*/
 
@@ -150,13 +159,17 @@ header ul
 
 #bottomfooter
 {
-	width: 100%;
+	/*max-width: 980px;*/
+	background-color: white;
+	text-align: center;
+	color: silver;
+	/*width: 100%;
 	position: fixed;
 	bottom: 0;
-	top: auto;
+	top: auto;*/
 }
 
-#footerspan
+/*#footerspan
 {
 	max-width: 970px;
 	background-color: white;
@@ -164,7 +177,7 @@ header ul
 	padding: 10px;
 	width: 100%;
 	color: silver;
-}
+}*/
 
 /*===============*/
 
@@ -240,12 +253,14 @@ header ul
 */
 	.container
 	{
+		overflow-x: inherit;
 		height: inherit;
 		padding: 0;
 	}
 
 	.container > article > header h2
 	{
+		margin: 12px 0 12px 0;
 		text-align: center;
 	}
 
