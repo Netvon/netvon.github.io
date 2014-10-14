@@ -29,7 +29,7 @@ p
 }
 #topheader
 {
-	background-color: rgba(105, 105, 105, 0.9);
+	background-color: rgba(0, 0, 0, 0.9);
 	/*height: 75px;*/
 	/*box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);*/
 	position: fixed;
@@ -67,7 +67,7 @@ header ul
 
 .navbutton a
 {
-	transition: background-color 0.2s ease;
+	transition: background-color 0.3s ease;
 	/*min-height: 75px;*/
 	width: 100%;
 	height: 100%;
@@ -80,8 +80,9 @@ header ul
 }
 .navbutton > a:hover
 {
-	font-weight: 700;
-	background-color: #707070;
+	/*font-weight: 700;*/
+	background-color: orange;
+	color: black;
 }
 .navbutton > a:active
 {
@@ -93,8 +94,20 @@ header ul
 	transition: max-height 0.3s ease;
 	overflow: hidden;
 	max-height: 0px;
-	background-color: #696969;
+	background-color: black;
 	display: block;
+	border-radius: 0 0 5px 5px;
+	/*box-shadow: 0px 0px 20px 0px rgba(0, 0, 0, 0.4);*/
+}
+
+.navbutton > ul > .navbutton
+{
+	border-bottom: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.navbutton > ul > .navbutton:last-child
+{
+	border-bottom: none;
 }
 
 .navbutton:hover > ul
