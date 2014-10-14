@@ -112,9 +112,8 @@ header ul
 
 .navbutton:hover > ul
 {
-	overflow: hidden;
-	max-height: 1000px;
-	
+	overflow: inherit;
+	max-height: 9999px;	
 }
 
 .navbutton > a:after
