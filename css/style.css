@@ -126,6 +126,11 @@ header ul
 	content: '';
 }
 
+.mobilenav
+{
+	display: none;
+}
+
 .centercontent
 {
 	display: flex;
@@ -280,5 +285,19 @@ header ul
 	{
 		border-top: 2px solid gray;
 		position: static;
+	}
+
+	.mobilenav
+	{
+		display: inherit;
+		width: 100%;
+	}
+	.mobilenav select
+	{
+		width: 100%;
+		background-color: black;
+		color: white;
+		border: none;
+		padding: 5px;
 	}
 }
