@@ -1,0 +1,1000 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+	<title></title>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+	<link href='http://fonts.googleapis.com/css?family=Open+Sans:400italic,700italic,400,300,700,600' rel='stylesheet' type='text/css'>
+	<style type="text/css">
+		html, body, div, span, applet, object, iframe,
+		h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+		a, abbr, acronym, address, big, cite, code,
+		del, dfn, em, img, ins, kbd, q, s, samp,
+		small, strike, strong, sub, sup, tt, var,
+		b, u, i, center,
+		dl, dt, dd, ol, ul, li,
+		fieldset, form, label, legend,
+		table, caption, tbody, tfoot, thead, tr, th, td,
+		article, aside, canvas, details, embed, 
+		figure, figcaption, footer, header, hgroup, 
+		menu, nav, output, ruby, section, summary,
+		time, mark, audio, video {
+			margin: 0;
+			padding: 0;
+			border: 0;
+			font-size: 100%;
+			font: inherit;
+			vertical-align: baseline;
+			text-decoration: none;
+		}
+		/* HTML5 display-role reset for older browsers */
+		article, aside, details, figcaption, figure, 
+		footer, header, hgroup, menu, nav, section {
+			display: block;
+		}
+		body {
+			line-height: 1;
+		}
+		ol, ul {
+			list-style: none;
+		}
+		blockquote, q {
+			quotes: none;
+		}
+		blockquote:before, blockquote:after,
+		q:before, q:after {
+			content: '';
+			content: none;
+		}
+		table {
+			border-collapse: collapse;
+			border-spacing: 0;
+		}
+
+		a:visited,
+		a:active,
+		a:hover
+		{
+			/*color: inherit;*/
+			outline: 0;
+			text-decoration: none;
+		}
+	</style>
+
+	<style type="text/css">
+		html
+		{
+			font-size: 62.5%;
+
+		}
+
+		body
+		{
+			font-family: 'Open Sans', sans-serif;
+			color: #0b0c0c;
+			background-color: #fafafa;
+			min-height: 100vh;
+			font-size: 1.8rem;
+			line-height: 2.6rem;
+
+			/*background: url(scr01.png) no-repeat center center fixed;
+			-webkit-background-size: cover;
+			-moz-background-size: cover;
+			-o-background-size: cover;
+			background-size: cover;*/
+		}
+
+		a
+		{
+			transition: all 0.2s ease;
+			position: relative;
+			top: 0;
+			color: #d8262d;
+			border-bottom: 1px solid rgba(216, 38, 45, 0.23);
+
+		}
+
+		a::after
+		{
+			font-family: "Lucida Console", Monaco, monospace;
+			content: '\2192';
+		}
+
+		a:hover
+		{
+			border-bottom: 3px solid rgba(216, 38, 45, 0.5);
+			position: relative;
+			top: -3px;
+		}
+
+		
+
+		.font-light
+		{
+			font-weight: 300;
+		}
+
+		.font-monospace
+		{
+			font-family: "Lucida Console", Monaco, monospace
+		}
+
+		small,
+		.font-small
+		{
+			font-size: 1.4rem;
+		}
+
+		.supercontainer
+		{
+		  min-height: 100vh;  
+		}
+
+		.list-inline
+		{
+		    display: -webkit-box;
+  			display: -webkit-flex;
+  			display: -ms-flexbox;
+  			display: flex;
+		  	
+		  	/*-webkit-box-align: end;
+  			-webkit-align-items: flex-end;
+      		-ms-flex-align: end;
+          	align-items: flex-end;*/
+
+		  	/*height: 44px;*/
+		}
+
+		.f-center
+		{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+		  	-ms-flex-pack: center;
+		  	justify-content: center;
+
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		.f-center-h
+		{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+			-ms-flex-pack: center;
+			justify-content: center;
+		}
+
+		.f-center-v
+		{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+		}
+
+		.f-space-between
+		{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-pack: justify;
+			-webkit-justify-content: space-between;
+			-ms-flex-pack: justify;
+			justify-content: space-between;
+
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+
+		.f-stretch-v
+		{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-align: stretch;
+			-webkit-align-items: stretch;
+			-ms-flex-align: stretch;
+			align-items: stretch;
+		}
+
+		.button
+		{
+		  	min-width: 18px;
+		  	padding-left: 18px;
+	  		padding-right: 18px;
+		}
+
+		.button-large
+		{
+			min-width: 98px;
+		}
+
+		.button, 
+		.button-large
+		{
+			transition: background 0.3s ease;
+			margin-right: 10px;
+			font-size: 1.8rem;
+			border: 1px solid #d7d7d7;
+			max-height: 36px;
+			background-color: #fafafa;
+		}
+
+		.button:last-child, 
+		.button-large:last-child
+		{
+			margin-right: 0;
+		}
+
+		.button:hover, 
+		.button-large:hover
+		{
+		  cursor: pointer;
+		  background-color: white;
+		}
+
+		.button a::after, 
+		.button-large a::after
+		{
+		  content: '';
+		}
+
+		.button > a,
+		.button-large > a
+		{
+			width: 100%;
+			height: 100%;
+		  
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-pack: center;
+			-webkit-justify-content: center;
+		  	-ms-flex-pack: center;
+		  	justify-content: center;
+		  	
+			-webkit-box-align: center;
+			-webkit-align-items: center;
+			-ms-flex-align: center;
+			align-items: center;
+
+			border: none;
+			color: inherit;
+		}	
+
+		.button-disabled
+		{
+			display: none;
+		}
+
+		.button-selected
+		{
+			background-color: white;
+		}
+
+		.site-container
+		{
+		  	max-width: 960px;
+		  	width: 100%;
+		  
+		  	display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-box-orient: vertical;
+			-webkit-box-direction: normal;
+			-webkit-flex-direction: column;
+			-ms-flex-direction: column;
+			flex-direction: column;
+			flex-direction: column;
+		  
+			-webkit-box-align: stretch;
+			-webkit-align-items: stretch;
+			-ms-flex-align: stretch;
+			align-items: stretch;
+		}
+
+		.site-header
+		{
+		  min-height: 34px;
+		  margin-top: 22px;
+		  margin-bottom: 22px;
+
+		  	-webkit-box-align: end;
+			-webkit-align-items: flex-end;
+			-ms-flex-align: end;
+			align-items: flex-end;
+
+		}
+
+		.site-header svg,
+		.site-header div,
+		.site-header nav,
+		.site-header a
+		{
+			min-height: 34px;
+		}
+
+		.site-header a
+		{
+			border: none;
+			margin: 0;
+			max-height: 44px;
+		}
+
+		.site-header a::after
+		{
+			content: none;
+		}
+
+
+		#site-logo-svg
+		{
+			height: 44px;
+			width: 100px;
+		}
+
+		#site-search-icon
+		{
+			height: 18px;
+			width: 18px;
+		}
+
+		#search-form
+		{
+			transition: all 0.3s ease;
+			width: 0px;
+		}
+
+		#search-form > input[type=text]
+		{
+			border: none;
+			height: 32px;
+			margin-left: 18px;
+			text-align: right;
+		}
+
+		#search-form > input[type=text]:focus
+		{
+			outline: none;
+		}
+
+		#search-button
+		{
+			overflow: hidden;
+		}
+
+		.page-content
+		{
+		  	background-color: white;
+
+			-webkit-box-flex: auto 1;
+			-webkit-flex: auto 1;
+			-ms-flex: auto 1;
+			flex: auto 1;
+
+			padding: 0 18px 0 18px;
+
+			overflow-wrap: break-word;
+			overflow: hidden;
+		}
+
+		.page-content article:first-of-type
+		{
+			margin-top: 1.8rem;
+		}
+
+		.page-header
+		{
+			margin: 0 -18px 0 -18px;
+			padding: 0 18px 0 18px;
+			min-height: 64px;
+
+			-webkit-box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.24);
+			-moz-box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.24);
+			box-shadow: inset 0px 0px 24px 0px rgba(0,0,0,0.24);
+
+			background-color: #6c6ce2;
+			background-image: -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.09) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.09) 75%, rgba(255, 255, 255, 0.09)), -webkit-linear-gradient(45deg, rgba(255, 255, 255, 0.09) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.09) 75%, rgba(255, 255, 255, 0.09));
+			background-image: linear-gradient(45deg, rgba(255, 255, 255, 0.09) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.09) 75%, rgba(255, 255, 255, 0.09)), 
+   			linear-gradient(45deg, rgba(255, 255, 255, 0.09) 25%, transparent 25%, transparent 75%, rgba(255, 255, 255, 0.09) 75%, rgba(255, 255, 255, 0.09));
+			background-size:32px 32px;
+
+			background-position: 0 0, 16px 16px;
+
+			color: white;
+			text-shadow: 0 1px 0 rgba(0,0,0,0.75);
+
+			font-size: 3.6rem;
+		}
+
+		.page-pagination
+		{
+			height: 34px;
+			margin-bottom: 18px;
+		}
+
+		.page-pagination > ul
+		{
+			min-height: 34px;
+		}
+
+		.page-pagination > ul li:first-child a::before
+		{
+			content: '\2190';
+			font-family: inherit;
+		}
+
+		.page-pagination > ul li:last-child a::after
+		{
+			content: '\2192';
+			font-family: inherit;
+		}
+
+		.article-header
+		{
+			margin-bottom: 1.8rem;
+			font-size: 2.8rem;
+		}
+
+		.article-container h2
+		{
+			font-size: 3.6rem;
+		}
+
+		.article-container h3
+		{
+			font-size: 2.8rem;
+		}
+
+		.article-container code,
+		.article-container kbd,
+		.article-container output,
+		.article-container samp,
+		.article-container var
+		{
+			padding: 0.4rem;
+			font-size: 1.6rem;
+			background-color: #f4eda6;
+			color: #433f2e;
+			font-family: "Lucida Console", Monaco, monospace;
+		}
+
+		.article-container pre > code
+		{
+			background-color: #f4eda6;
+		}
+
+		.article-container blockquote
+		{
+			background-color: #fafafa;
+			font-style: italic;
+		}
+
+		.article-container blockquote > p:last-child
+		{
+			margin: 0;
+		}
+
+		.article-container pre > code,
+		.article-container blockquote
+		{
+			display: block;
+			padding: 1.8rem;
+			margin-bottom: 1.8rem;
+			overflow: auto;
+			word-wrap: normal;
+		}
+
+		.article-container p,
+		.article-container figure,
+		.article-container pre,
+		.article-container blockquote,
+		.article-container > ul,
+		.article-container > ol,
+		.article-container > dl
+		{
+			margin-bottom: 2.6rem;
+			-ms-word-wrap: break-word;
+			word-wrap: break-word;
+			/*overflow: auto;*/
+		}
+
+		.article-container ul,
+		.article-container ol,
+		.article-container dl
+		{
+			list-style: inside;
+			margin-left: 1.8rem;
+			margin-right: 1.8rem;
+		}
+
+		.article-container ol
+		{
+			list-style: decimal inside;
+		}
+
+		.article-container dl > dd
+		{
+			margin-left: 1.8rem;
+		}
+
+		.article-container strike,
+		.article-container s
+		{
+			text-decoration: line-through;
+		}
+
+		.article-container abbr
+		{
+			border-bottom: 1px dotted #cccccc;
+			cursor: help;
+		}
+
+		.article-container dfn,
+		.article-container em,
+		{
+			font-style: italic;
+		}
+
+
+		.article-footer
+		{
+			border-bottom: 2px solid #cccccc;
+			margin: 18px -18px 18px -18px;
+			padding: 0 18px 18px;
+			color: #666666;
+		}
+
+		.article-permalink 
+		{
+			border: none;
+			color: inherit;
+		}
+
+		.article-permalink:hover
+		{
+			border: none;
+		}
+
+		.article-tags-list
+		{
+			display: -webkit-box;
+			display: -webkit-flex;
+			display: -ms-flexbox;
+			display: flex;
+
+			-webkit-flex-wrap: wrap;
+			-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+		}
+
+		.article-tags-tag::before
+		{
+			content: '#';
+			color: #999999;
+		}
+
+		.article-tags-tag
+		{
+			color: inherit;
+			border: none;
+			margin-right: 9px;
+		}
+
+		.article-tags-tag::after
+		{
+			content: none;
+		}
+
+		.site-footer
+		{
+			color: #666666;
+		  background-color: white;
+		  /*min-height: 40px;*/
+		  border-top: 2px solid #cccccc;
+		  font-size: 1.26rem;
+		  padding: 18px;
+		  text-align: center;
+		}
+
+		@media only screen and (max-width: 960px)
+		{
+			.site-header
+			{
+				padding: 0 18px 0 18px;
+			}
+
+			.article-container img
+			{
+				width: 100%;
+			}
+		}
+	</style>
+
+</head>
+<body>
+	<div class="supercontainer f-center-h">
+		<div class="site-container">
+			<header class="site-header f-space-between">
+				<a href="" title="Home">
+					<svg version="1.2" baseProfile="tiny" id="site-logo-svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							 x="0px" y="0px" viewBox="0 0 100 44" xml:space="preserve">
+							<path d="M10.2,11.1c0,0,2.4-1.7,4.5-1.7c2.1,0,5.6,1,6.5,3.3V36h-4.1V14.6c-0.7-0.8-1.6-1-2.4-1c-1.7,0-4.1,1.1-4.5,1.7V36H6.1V9.4
+								h4.1V11.1z M89,9.4h-4.1V36H89V15.2c0.4-0.6,2.8-1.7,4.5-1.7c0.8,0,1.7,0.2,2.4,1V36h4.1V12.8c-0.9-2.3-4.4-3.3-6.5-3.3
+								c-2.1,0-4.5,1.7-4.5,1.7V9.4z M54.2,9.5l-3.9,1.4l6,25.1h4.1c0,0,3.6-6.4,6.1-26.5l-4.1,0c-1.2,14.6-3.5,21.3-3.5,21.3L54.2,9.5z
+								 M4.2,31.8H0V36h4.2V31.8z M54.1,36l-1-4.2h-2.3c-0.4,0-0.7,0-1.1,0c-3.3,0-5.2,0-5.3-1.8V13.6h5.2V9.4h-5.2V0h-4.1v30.9
+								c0.5,4.4,2.1,5.2,9.4,5.1v0H54.1z M49.7,31.8L49.7,31.8c0.4,0,0.7,0,1.1,0H49.7z M75.4,13.6h-0.2c-1.6,0-2.8,0.1-3.6,0.2
+								c-0.2,0.9-0.4,2.3-0.4,4.3c0,0.1,0,3.9,0,4c0,0.1,0,5.1,0,5.2c0,2,0.2,3.4,0.4,4.3c0.8,0.1,2,0.2,3.6,0.2h0.2c1.6,0,2.8-0.1,3.6-0.2
+								c0.2-0.9,0.4-2.3,0.4-4.3c0-0.1,0-5.2,0-5.2l0-4c0-2-0.2-3.4-0.4-4.3C78.3,13.7,77,13.6,75.4,13.6 M75.4,9.4c3.1,0,6.2,0.3,6.7,1
+								c1,1.3,1.5,4.5,1.5,7.7c0,0.1,0,9.2,0,9.2c0,3.2-0.5,6.3-1.5,7.7c-0.5,0.6-3.5,0.9-6.7,1h-0.2c-3.1,0-6.2-0.3-6.7-1
+								c-1-1.3-1.5-4.5-1.5-7.7c0,0,0-9.1,0-9.2c0-3.2,0.5-6.4,1.5-7.7c0.5-0.6,3.5-0.9,6.7-1H75.4L75.4,9.4z M68.1,9.4 M37.4,31.8L39,36
+								h-7.1v0c-7.3,0.1-8.9-0.7-9.4-5.1V18.3c0-3.3,0.4-6.5,1.5-7.9c0.5-0.6,3.5-0.9,6.7-1h0.2c3.1,0,6.2,0.3,6.7,1c1,1.4,1.5,4.6,1.5,7.9
+								c0,3.3-0.5,6.5-1.5,7.9c-0.5,0.6-3.5,0.9-6.7,1h-0.2c-1.2,0-2.7,0-4,0v2.9c0,1.6,1.5,1.8,4.2,1.8c0.3,0,0.7,0,1.1,0
+								c0.4,0,3.5,0,3.9,0H37.4z M26.6,18.3V23c1.4,0,2.8,0,4,0h0.2c1.6,0,2.8-0.1,3.6-0.2c0.2-0.9,0.4-2.4,0.4-4.5c0-2.1-0.2-3.6-0.4-4.5
+								c-0.8-0.1-2-0.2-3.6-0.2h-0.2c-1.6,0-2.8,0.1-3.6,0.2C26.8,14.7,26.6,16.2,26.6,18.3z M100,40H0v4h100V40z"/>
+					</svg>
+				</a>
+
+				<nav>
+					<ul class="list-inline font-light">
+						<li class="button-large">
+						  <a href="#" title="All posts">
+						    posts
+						  </a>
+						</li>
+						<li class="button-large">
+							<a href="#" title="All drawings">
+						    drawings
+						  </a>
+						</li>
+						<li class="button-large">
+							<a href="#" title="All code">
+						    code
+						  </a>
+						</li>
+					</ul>
+				</nav>
+
+				<div>
+					<ul class="list-inline">
+						<li id="search-button" class="button f-space-between">
+					    	<svg version="1.2" baseProfile="tiny" id="site-search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+							 x="0px" y="0px" viewBox="0 0 18 18" xml:space="preserve">
+							<g>
+								<path d="M14.8,3.4c-1.4-1.3-3.2-2.1-5.1-2.1c-1.9,0-3.7,0.8-5,2.1c-2.4,2.4-2.7,6.2-0.9,8.9l-2.2,2.1C1,15.1,1,16,1.6,16.6
+									c0.3,0.3,0.7,0.4,1.1,0.4c0.4,0,0.8-0.2,1.1-0.4l2.2-2.2c1.1,0.8,2.5,1.2,3.9,1.2c1.9,0,3.7-0.8,5.1-2.1c1.3-1.3,2.1-3.1,2.1-5
+									C16.9,6.6,16.1,4.8,14.8,3.4z M14.1,11.2c-1,1.6-2.7,2.5-4.4,2.5c-1.7,0-3.4-0.8-4.4-2.5c-1-1.6-1-3.8,0-5.4c1-1.6,2.7-2.5,4.4-2.5
+									c1.7,0,3.4,0.8,4.4,2.5C15.1,7.4,15.1,9.5,14.1,11.2z"/>
+							</g>
+							</svg>
+							<form class="f-center" id="search-form" action="/search" method="get">
+							    <input type="text" name="q" placeholder="Hit enter to search" required />
+							</form>
+						</li>
+					</ul>
+				</div>
+
+				<!-- <div class="button f-center">
+					<svg version="1.2" baseProfile="tiny" id="site-search-icon" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+						 x="0px" y="0px" viewBox="0 0 18 18" xml:space="preserve">
+						<g>
+							<path d="M14.8,3.4c-1.4-1.3-3.2-2.1-5.1-2.1c-1.9,0-3.7,0.8-5,2.1c-2.4,2.4-2.7,6.2-0.9,8.9l-2.2,2.1C1,15.1,1,16,1.6,16.6
+								c0.3,0.3,0.7,0.4,1.1,0.4c0.4,0,0.8-0.2,1.1-0.4l2.2-2.2c1.1,0.8,2.5,1.2,3.9,1.2c1.9,0,3.7-0.8,5.1-2.1c1.3-1.3,2.1-3.1,2.1-5
+								C16.9,6.6,16.1,4.8,14.8,3.4z M14.1,11.2c-1,1.6-2.7,2.5-4.4,2.5c-1.7,0-3.4-0.8-4.4-2.5c-1-1.6-1-3.8,0-5.4c1-1.6,2.7-2.5,4.4-2.5
+								c1.7,0,3.4,0.8,4.4,2.5C15.1,7.4,15.1,9.5,14.1,11.2z"/>
+						</g>
+					</svg>
+				</div> -->
+			</header>
+
+			<!-- The main content for this page -->
+			<main class="page-content">
+				<!-- page header with background pattern and box-shadow -->
+				<header class="page-header f-center-v font-light">
+					<h2>{page name}</h2>
+				</header>
+
+				<article>
+					<h3 class="article-header font-light">{Article-Title}</h3>
+					<div class="article-container">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci sodales, sagittis dolor sit amet, vestibulum lectus. Sed dignissim massa vel dapibus <a href="" title="">sollicitudin</a>. Nullam dignissim, justo et feugiat auctor, sem ante feugiat ante, vel accumsan nibh ex nec massa. Integer consectetur massa ultrices risus euismod luctus. Donec lacinia, nibh gravida pretium accumsan, enim tortor ullamcorper lorem, in posuere quam arcu <code>semper</code> libero. Curabitur tellus neque, placerat interdum aliquet at, commodo et magna. Aliquam commodo risus et iaculis semper. Sed ligula sapien, luctus et hendrerit eget, pretium vitae quam. Quisque lacinia libero sed augue ultrices, vitae bibendum neque euismod. In imperdiet quis sapien in posuere. <abbr title="Hyper Text Markup Language">HTML</abbr></p>
+						<pre><code>function Panel(element, canClose, closeHandler) {
+	this.element = element;
+	this.canClose = canClose;
+	this.closeHandler = function () { if (closeHandler) closeHandler()
+};</code></pre>
+						<figure>
+							<figcaption>Some code</figcaption>
+						<pre><code>function Panel(element, canClose, closeHandler) {
+	this.element = element;
+	this.canClose = canClose;
+	this.closeHandler = function () { if (closeHandler) closeHandler()
+};</code></pre>
+						</figure>
+						<p>Nulla venenatis ac dui non efficitur. Praesent nec euismod ante. Curabitur ut pulvinar massa, eu iaculis orci. Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut. Mauris felis ligula, consequat in libero a, varius viverra magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. In nec semper arcu.
+						<blockquote>
+							<p>Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut.</p>
+							<p>Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut.</p>
+						</blockquote>
+						</p>
+						<p>Nulla venenatis ac dui non efficitur. Praesent nec euismod ante. Curabitur ut pulvinar massa, eu iaculis orci. Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut. Mauris felis ligula, consequat in libero a, varius viverra magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. In nec semper arcu.</p>
+						<ul>
+							<li>UL item</li>
+							<li>UL item
+								<ul>
+									<li>UL item
+										<ol>
+											<li>UL item</li>
+											<li>UL item
+												<ul>
+													<li>UL item
+														<ul>
+															<li>UL item</li>
+															<li>UL item</li>
+														</ul>
+													</li>
+													<li>UL item</li>
+												</ul>
+											</li>
+										</ol>
+									</li>
+									<li>UL item</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ol>
+							<li>OL item</li>
+							<li>OL item</li>
+						</ol>
+
+						<dl>
+							<dt>Name</dt>
+							<dd>Value</dd>
+							<dt>Name</dt>
+							<dd>Value</dd>
+							<dt>Name</dt>
+							<dd>Value</dd>
+						</dl>
+
+						<p><img src="https://31.media.tumblr.com/7c4b22ebf45d2f6ebcac17fe4a43945e/tumblr_inline_ndsk87tapW1sqbqq6.png" /></p>
+						<p><strike><span>strike</span></strike></p>
+						<p>overflowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww.</p>
+						
+					</div>
+					<footer class="article-footer font-small">
+						<div class="f-space-between">
+							<!-- time and permalink -->
+							<time datetime="2011-01-12">January 12th, 2011</time>
+							<a class="article-permalink font-monospace" href="{permalink}" title="Permalink to {article}">permalink</a>
+						</div>
+						<ul class="article-tags-list">
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">sample</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+						</ul>
+					</footer>
+				</article>
+				<article>
+					<h3 class="article-header font-light">{Article-Title}</h3>
+					<div class="article-container">
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sit amet orci sodales, sagittis dolor sit amet, vestibulum lectus. Sed dignissim massa vel dapibus <a href="" title="">sollicitudin</a>. Nullam dignissim, justo et feugiat auctor, sem ante feugiat ante, vel accumsan nibh ex nec massa. Integer consectetur massa ultrices risus euismod luctus. Donec lacinia, nibh gravida pretium accumsan, enim tortor ullamcorper lorem, in posuere quam arcu <code>semper</code> libero. Curabitur tellus neque, placerat interdum aliquet at, commodo et magna. Aliquam commodo risus et iaculis semper. Sed ligula sapien, luctus et hendrerit eget, pretium vitae quam. Quisque lacinia libero sed augue ultrices, vitae bibendum neque euismod. In imperdiet quis sapien in posuere. <abbr title="Hyper Text Markup Language">HTML</abbr></p>
+						<pre><code>function Panel(element, canClose, closeHandler) {
+	this.element = element;
+	this.canClose = canClose;
+	this.closeHandler = function () { if (closeHandler) closeHandler()
+};</code></pre>
+						<figure>
+							<figcaption>Some code</figcaption>
+						<pre><code>function Panel(element, canClose, closeHandler) {
+	this.element = element;
+	this.canClose = canClose;
+	this.closeHandler = function () { if (closeHandler) closeHandler()
+};</code></pre>
+						</figure>
+						<p>Nulla venenatis ac dui non efficitur. Praesent nec euismod ante. Curabitur ut pulvinar massa, eu iaculis orci. Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut. Mauris felis ligula, consequat in libero a, varius viverra magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. In nec semper arcu.
+						<blockquote>
+							<p>Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut.</p>
+							<p>Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut.</p>
+						</blockquote>
+						</p>
+						<p>Nulla venenatis ac dui non efficitur. Praesent nec euismod ante. Curabitur ut pulvinar massa, eu iaculis orci. Pellentesque iaculis purus elit, quis ullamcorper lectus consectetur ut. Mauris felis ligula, consequat in libero a, varius viverra magna. Interdum et malesuada fames ac ante ipsum primis in faucibus. In nec semper arcu.</p>
+						<ul>
+							<li>UL item</li>
+							<li>UL item
+								<ul>
+									<li>UL item
+										<ol>
+											<li>UL item</li>
+											<li>UL item
+												<ul>
+													<li>UL item
+														<ul>
+															<li>UL item</li>
+															<li>UL item</li>
+														</ul>
+													</li>
+													<li>UL item</li>
+												</ul>
+											</li>
+										</ol>
+									</li>
+									<li>UL item</li>
+								</ul>
+							</li>
+						</ul>
+
+						<ol>
+							<li>OL item</li>
+							<li>OL item</li>
+						</ol>
+
+						<dl>
+							<dt>Name</dt>
+							<dd>Value</dd>
+							<dt>Name</dt>
+							<dd>Value</dd>
+							<dt>Name</dt>
+							<dd>Value</dd>
+						</dl>
+
+						<p><img src="https://31.media.tumblr.com/7c4b22ebf45d2f6ebcac17fe4a43945e/tumblr_inline_ndsk87tapW1sqbqq6.png" /></p>
+						<p><strike><span>strike</span></strike></p>
+						<p>overflowwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwwww.</p>
+						
+					</div>
+					<footer class="article-footer font-small">
+						<div class="f-space-between">
+							<!-- time and permalink -->
+							<time datetime="2011-01-12">January 12th, 2011</time>
+							<a class="article-permalink font-monospace" href="{permalink}" title="Permalink to {article}">permalink</a>
+						</div>
+						<ul class="article-tags-list">
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">sample</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+							<li class="font-monospace">
+								<a class="article-tags-tag" href="{Tag}" title="Permalink to {TagName}">first</a>
+							</li>
+						</ul>
+					</footer>
+				</article>
+
+				<nav class="page-pagination">
+					<ul class="f-stretch-v f-space-between">
+						<li class="button button-enabled f-center">
+							<a href="#" title="Show older posts">Older posts</a>
+						</li>
+						<li class="button button-enabled f-center">
+							<a href="#" title="Show newer posts">Newer posts</a>
+						</li>
+					</ul>
+				</nav>
+
+			</main>
+
+			<!-- Page footer, sticks to bottom of page -->
+			<footer class="site-footer f-center">
+				<small>
+					Created by Tom van Nimwegen, {Copydate}. Powered by <a href="http://www.tumblr.com/" title="Tumblr">Tumblr&#8482;</a>
+				</small>
+			</footer>
+		</div>
+	</div>
+
+	<script>	
+		$("#search-button").click(function(){
+			var form = $("#search-form");
+
+			// console.log(form.width());
+
+			if(form.width() > 0)
+			{
+  				//form.hide();
+  				$("#search-button").removeClass('button-selected');
+  				$("#search-form > input[type=text]")
+  				form.css({
+					width: '0px'
+				});
+			}
+			else if (form.width() <= 0)
+			{
+				//form.show();
+				$("#search-button").addClass('button-selected');
+				$("#search-form > input[type=text]").focus();
+				form.css({
+					width: '187px'
+				});
+			}
+		});
+
+
+		// $("#search-form > input[type=text]").keypress(function (e) {
+		//   if (e.which == 13 && 
+		//   	  $("#search-form > input[type=text]").val() == "") {
+		// 	return false;
+		//   }
+		// });
+
+	</script>
+</body>
+</html>
