@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<!-- Website voor Websites 1 									-->
+<!-- Gemaakt door Tom van Nimwegen en Wilfred van Eck, 41IN01A 	-->
+
+<html>
+	<!-- Header start -->
+	<head>
+		<meta charset="utf-8">
+		<!-- Viewport settings voor mobile -->
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+		<title>Game Dev Tycoon Wiki</title>
+		<!-- Stylesheets -->
+		<link rel="stylesheet" href="css/newreset.css" type='text/css'>
+		<link rel="stylesheet" href="css/flex.css" type='text/css'>
+		<link rel="stylesheet" href="css/newstyle.css" type='text/css'>
+		<!-- Google fonts -->
+		<link href='http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,700italic,400,300,700' rel='stylesheet' type='text/css'>
+		<!-- Favicon -->
+		<link rel="apple-touch-icon" sizes="57x57" href="apple-touch-icon-57x57.png">
+		<link rel="apple-touch-icon" sizes="114x114" href="apple-touch-icon-114x114.png">
+		<link rel="apple-touch-icon" sizes="72x72" href="apple-touch-icon-72x72.png">
+		<link rel="apple-touch-icon" sizes="144x144" href="apple-touch-icon-144x144.png">
+		<link rel="apple-touch-icon" sizes="60x60" href="apple-touch-icon-60x60.png">
+		<link rel="apple-touch-icon" sizes="120x120" href="apple-touch-icon-120x120.png">
+		<link rel="apple-touch-icon" sizes="76x76" href="apple-touch-icon-76x76.png">
+		<link rel="apple-touch-icon" sizes="152x152" href="apple-touch-icon-152x152.png">
+		<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon-180x180.png">
+		<link rel="icon" type="image/png" href="favicon-192x192.png" sizes="192x192">
+		<link rel="icon" type="image/png" href="favicon-160x160.png" sizes="160x160">
+		<link rel="icon" type="image/png" href="favicon-96x96.png" sizes="96x96">
+		<link rel="icon" type="image/png" href="favicon-16x16.png" sizes="16x16">
+		<link rel="icon" type="image/png" href="favicon-32x32.png" sizes="32x32">
+		<meta name="msapplication-TileColor" content="#da532c">
+		<meta name="msapplication-TileImage" content="mstile-144x144.png">
+		<!-- Meta tags -->
+		<meta name="description" content="A wiki about GameDev Tycoon">
+		<meta name="keywords" content="wiki, gdt, gamedev, game, dev, tycoon">
+		<meta http-equiv="language" content="EN">
+		<meta name="author" content="Tom van Nimwegen, Wilfred van Eck">
+	</head>
+	<!-- Header end -->
+
+	<!-- Body start -->
+	<body>
+		<!-- Dit is de super container, die zal er voor zorgen dat de pagina altijd in het midden staat -->
+		<div class="site-super-container f-center-h">
+			<!-- Bij de page container kan alles wat op de huidige pagina gestyled worden (denk aan padding) -->
+			<div class="site-container">
+				<!-- De header van de pagina met het menu -->
+				<header class="site-header">
+					<!-- Het menu van de pagina -->
+					<nav class="site-header-nav">
+						<ul class="f-space-between">
+							<li class="nav-element">
+								<span id="site-logo">Wiki</span>
+							</li>
+							<li class="nav-element nav-link">
+								<a href="/platforms" title="A listing of all platforms found in GDT">Platforms</a>
+							</li>
+							<li class="nav-element nav-link">
+								<a href="/genres" title="A listing of all genres found in GDT">Genres</a>
+							</li>
+							<li class="nav-element nav-link">
+								<a href="/research" title="A listing of all platforms found in GDT">Research</a>
+							</li>
+							<li class="nav-element nav-link">
+								<a href="/contact" title="Found an error? Contact us!">Contact</a>
+							</li>
+							<li class="nav-element nav-link">
+								<a href="/about">About</a>
+							</li>
+						</ul>
+					</nav>
+
+					<!-- De dropdown versie van het menu, voor @media -->
+					<nav class="site-header-mnav"> 
+						<select onchange="location = this.options[this.selectedIndex].value;">
+							 <optgroup label="Wiki">
+								<option value="#">Themes</option>
+						 		<option value="#">Plugins</option>
+						 		<option value="#">Tutorials</option>
+						 	 </optgroup>
+							<option value="#">Mercedes</option>
+						 	<option value="#">Audi</option>
+						</select>
+					</nav>
+				</header>
+
+				<!-- De main content van de pagina, hier staan alle artikelen in -->
+				<main class="page-content">
+					<!-- De naam van deze pagina -->
+					<header class="page-header font-light">
+						<nav class="page-breadcrum">
+							<ul>
+								<li>You are here</li>
+								<li><a href="#">Home</a></li>
+								<li><a href="#">Subpage</a></li>
+							</ul>
+						</nav>
+						<h2>GDT Wiki Home</h2>	
+					</header>
+
+					<!-- Hieronder kunnen artikelen komen -->
+					<article>
+						<p>Welcome to the Game Dev Tycoon wiki.</p>
+						<p>Game Dev Tycoon is a simulation game created by <a href="http://www.greenheartgames.com">Greenheart Games</a>. The game centers around managing a game development studio.</p>
+						<div class="f-space-between">
+							<div class="index-box">
+								<h3>Stuff</h3>
+								<ul>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+								</ul>
+							</div>
+							<div class="index-box">
+								<h3>Stuff</h3>
+								<ul>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+								</ul>
+							</div>
+							<div class="index-box">
+								<h3>Stuff</h3>
+								<ul>
+									<li>test</li>
+									<li>test</li>
+									<li>test</li>
+								</ul>
+							</div>
+						</div>
+					</article>
+				</main>
+
+				<!-- De footer van deze website -->
+				<footer class="site-footer f-center">
+					<small>
+						Created by Tom van Nimwegen and Wilred van Eck, 2014
+					</small>
+				</footer>
+			</div>
+		</div>
+	</body>
+	<!-- Body end -->
+</html>
