@@ -1,15 +1,19 @@
 /*===============================================================*/
-/*= newreset.css												   	=*/
-/*===============================================================*/
-/*= 1: Typography												=*/
-/*= 2: Default style removal									=*/
-/*= 3: Browser fix												=*/
+/*= reset.css												   	=*/
 /*===============================================================*/
 
 /*===============================================================*/
 /*= 1: Typography												=*/
 /*===============================================================*/
+html
+{
+	font-size: 62.5%;
+}
 
+body
+{
+	font-size: 1.4rem;
+}
 /*===============================================================*/
 /*===============================================================*/
 /*= 2: Default style removal									=*/
@@ -26,38 +30,15 @@ h1,h2,h3,h4,h5,h6
 {
 	padding: 0;
 	margin: 0;
-	font-weight: inherit;
 }
 
-ol,
 ul
 {
 	list-style: none;
 }
 
-blockquote, q 
-{
-	quotes: none;
-}
-
-blockquote:before, 
-blockquote:after,
-q:before, 
-q:after 
-{
-	content: '';
-	content: none;
-}
-
-table 
-{
-	border-collapse: collapse;
-	border-spacing: 0;
-}
-
 a
 {
-	color: inherit;
 	text-decoration: none;
 	background: transparent;
 }
@@ -66,7 +47,6 @@ a:visited,
 a:active,
 a:hover
 {
-	color: inherit;
 	outline: 0;
 	text-decoration: none;
 }
