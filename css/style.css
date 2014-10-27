@@ -235,10 +235,40 @@ small,
 	color: rgb(131, 131, 131);
 }
 
+.site-footer a
+{
+	-webkit-transition: border-bottom 0.2s ease;
+	        transition: border-bottom 0.2s ease;
+	-webkit-transition: top 0.2s ease;
+	        transition: top 0.2s ease;
+
+	position: relative;
+	top: 0;
+
+	color: #d8262d;
+	border-bottom: 0.1rem solid rgba(216, 38, 45, 0.23);
+}
+
+.site-footer a:hover,
+.site-footer a:active
+{
+	-webkit-transition: all 0.2s ease;
+	        transition: all 0.2s ease;
+
+	position: relative;
+	top: -0.3rem;
+
+	border-bottom: 0.4rem solid rgba(216, 38, 45, 0.23);
+}
+
+.site-footer a::after
+{
+	content: '\00a0\2192';
+}
+
 /*===============================================================*/
 /*= 5: Page 													=*/
 /*===============================================================*/
-
 .page-content div.index-box
 {
 	-webkit-box-flex: 1;
@@ -290,6 +320,82 @@ small,
 {
 	background-color: rgba(147,128,108,.1);
 	padding: 1.8rem;
+}
+
+.page-content fieldset
+{
+	border: 0.3rem solid rgba(147,128,108,.4);
+}
+
+.page-content fieldset > div
+{
+	margin-bottom: 0.9rem;
+}
+
+.page-content fieldset > div:last-child
+{
+	margin-bottom: 0;
+}
+
+.page-content fieldset span
+{
+	-webkit-box-flex: 0;
+	-webkit-flex: 0 1 100px;
+	    -ms-flex: 0 1 100px;
+	        flex: 0 1 100px;
+    font-size: 1.4rem;
+    padding: 0 0.9rem;
+}
+
+.page-content fieldset input,
+.page-content fieldset textarea
+{
+	padding: 0.9rem;
+	border: 0.2rem solid rgba(147,128,108,.1);
+	background-color: rgba(147,128,108,.1);
+	outline: none;
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 0 auto;
+	    -ms-flex: 1 0 auto;
+	        flex: 1 0 auto;
+    font-size: 100%;
+    font-family: 'Open Sans', sans-serif;
+}
+
+.page-content fieldset input:hover,
+.page-content fieldset input:active,
+.page-content fieldset input:focus,
+.page-content fieldset textarea:hover,
+.page-content fieldset textarea:active,
+.page-content fieldset textarea:focus
+{
+	padding: 0.9rem;
+	border: 0.2rem solid gray;
+	background-color: white;
+	outline: none;
+}
+
+.page-content fieldset button
+{
+	transition: all 0.2s ease;
+	padding: 0.9rem;
+	border: 0.2rem solid orange;
+	background-color: transparent;
+	color: orange;
+	font-size: 100%;
+	outline: none;
+}
+
+.page-content fieldset button:hover,
+.page-content fieldset button:active,
+.page-content fieldset button:focus
+{
+	padding: 1.4rem;
+	border: 0.2rem solid orange;
+	background-color: orange;
+	color: white;
+	cursor: pointer;
+	font-size: 110%;
 }
 
 /*===============================================================*/
