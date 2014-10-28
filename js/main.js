@@ -4,18 +4,22 @@ $( document ).ready(function() {
 	});
 
 	$(window).resize(function(event) {
+		
+		var turnpoint = 480 * window.devicePixelRatio;
 		var width = $(window).width();
+		var widthPR = width * window.devicePixelRatio;
+
 		var visible = $('.nav-link').is(':visible');
 
-		if(width >= 480 &&
-			!visible)
+		if(widthPR >= turnpoint 
+			&& !visible)
 		{
 			invert();
 			return;
 		}
 
-		if(width < 480 &&
-			visible)
+		if(widthPR < turnpoint 
+			&& visible)
 		{
 			invert();
 			return;

@@ -91,6 +91,12 @@ small,
 	overflow: hidden;
 }
 
+.page-content article
+{
+	overflow: hidden;
+	max-width: 100%;
+}
+
 .page-content article:first-of-type
 {
 	margin-top: 1.8rem;
@@ -362,6 +368,12 @@ small,
 	        flex: 0 1 100px;
     font-size: 1.4rem;
     padding: 0 0.9rem;
+}
+
+.page-content textarea
+{
+	resize: vertical;
+	width: 10rem;
 }
 
 .page-content fieldset input,
