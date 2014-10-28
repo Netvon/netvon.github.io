@@ -1,6 +1,14 @@
 $( document ).ready(function() {
 	$('.nav-element:first-child').click(function(event) {
-		invert();
+		var turnpoint = 480 * window.devicePixelRatio;
+		var width = $(window).width();
+		var widthPR = width * window.devicePixelRatio;
+
+		if(widthPR <= turnpoint)
+		{
+			invert();
+		}
+		
 	});
 
 	$(window).resize(function(event) {
