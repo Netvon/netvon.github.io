@@ -337,12 +337,17 @@ small,
 
 .page-content p,
 .page-content h2,
+.page-content div.table-container
+{
+	margin-bottom: 1.8rem;
+}
+
 .page-content h3,
 .page-content h4,
 .page-content h5,
 .page-content h6
 {
-	margin-bottom: 1.8rem;
+	margin-bottom: 0.45rem;
 }
 
 .page-content div,
@@ -350,6 +355,13 @@ small,
 .page-content fieldset
 {
 	overflow: auto;
+}
+
+.page-content div.table-container
+{
+	-webkit-box-shadow: inset 0px 0px 21px 0px rgba(50, 50, 50, 0.33);
+	-moz-box-shadow:    inset 0px 0px 21px 0px rgba(50, 50, 50, 0.33);
+	box-shadow:         inset 0px 0px 21px 0px rgba(50, 50, 50, 0.33);
 }
 
 .page-content pre
@@ -448,12 +460,13 @@ small,
 {
 	width: 100%;
 	background-color: rgba(147,128,108,.1);
+	/*margin-bottom: 1.8rem;*/
 }
 
 .page-content table tbody > tr
 {
-	border-bottom: 0.1rem solid black;
-	border-top: 0.1rem solid black;
+	border-bottom: 0.2rem solid white;
+	border-top: 0.2rem solid white;
 }
 
 .page-content table tbody > tr:nth-child(odd)
@@ -476,13 +489,19 @@ small,
 	height: 5rem;
 }
 
+.page-content table td
+{
+	vertical-align: baseline;
+}
+
 .page-content table th,
 .page-content table td
 {
-	border-left: 0.1rem solid black;
-	border-right: 0.1rem solid black;
+	border-left: 0.2rem solid white;
+	border-right: 0.2rem solid white;
 	min-width: 20rem;
 	padding: 0.45rem;
+	
 }
 
 .page-content table tbody > tr th:first-child,
@@ -495,6 +514,38 @@ small,
 .page-content table tbody > tr td:last-child
 {
 	border-right: none;
+}
+
+.page-content table p
+{
+	margin: 0;
+}
+
+.page-content .gdt-cr,
+.page-content .gdt-rp
+{
+	font-family: "Lucida Console", Monaco, monospace;
+	padding: 0.45rem;
+}
+
+.page-content .gdt-cr
+{
+	background-color: orange;
+}
+
+.page-content .gdt-cr::after
+{
+	content: '\a0 cr.';
+}
+
+.page-content .gdt-rp
+{
+	background-color: mediumaquamarine;
+}
+
+.page-content .gdt-rp::after
+{
+	content: 'RP';
 }
 
 /*===============================================================*/
