@@ -359,8 +359,6 @@ small,
 
 .page-content div.table-container
 {
-	-webkit-box-shadow: inset 0px 0px 21px 0px rgba(50, 50, 50, 0.33);
-	-moz-box-shadow:    inset 0px 0px 21px 0px rgba(50, 50, 50, 0.33);
 	box-shadow:         inset 0px 0px 21px 0px rgba(50, 50, 50, 0.33);
 }
 
@@ -504,6 +502,11 @@ small,
 	
 }
 
+.page-content table td.f-row
+{
+	border: none;
+}
+
 .page-content table tbody > tr th:first-child,
 .page-content table tbody > tr td:first-child
 {
@@ -546,6 +549,22 @@ small,
 .page-content .gdt-rp::after
 {
 	content: 'RP';
+}
+
+.page-content .gdt-effect
+{
+	color: green;
+	border: 0.1rem solid rgba(0, 128, 0, 0.33);
+	padding: 0.2rem;
+	margin: 0.1rem;
+}
+
+.page-content article ul,
+.page-content article ol
+{
+	list-style: inside;
+	margin-left: 1.8rem;
+	margin-right: 1.8rem;
 }
 
 /*===============================================================*/

@@ -35,7 +35,6 @@
 		<!-- Meta tags -->
 		<meta name="description" content="A wiki about GameDev Tycoon">
 		<meta name="keywords" content="wiki, gdt, gamedev, game, dev, tycoon">
-		<meta http-equiv="language" content="EN">
 		<meta name="author" content="Tom van Nimwegen, Wilfred van Eck">
 		<!-- JavaScript -->
 		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
@@ -51,7 +50,7 @@
 			<div class="site-container">
 				<!-- De header van de pagina met het menu -->
 				<header class="site-header">
-					<a name="top"></a>
+					<a id="top"></a>
 					<!-- Het menu van de pagina -->
 					<nav class="site-header-nav">
 						<ul class="f-space-between">
@@ -102,7 +101,8 @@
 						<p>There are a number of ways you can train your employees in Game Dev Tycoon. On this page we will list all of them.</p>
 
 						<h3>Book Studies</h3>
-						<p>These training methods are available from when you first start in your new office.</p>
+						<p>These training methods are available to you after you receive your first office upgrade. All these trainings can be applied
+						to yourself and your employees. The points gain of these studies caps at 500 points.</p>
 						<div class="table-container">
 							<table>
 								<tbody>
@@ -113,34 +113,92 @@
 									</tr>
 									<tr>
 										<td>Game Dev Gems</td>
-										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K<span></td>
-										<td>++ Design, ++ Technology, + Research, + Speed</td>
+										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												++ Design
+											</span>
+											<span class="gdt-effect">
+												++ Technology
+											</span>
+											<span class="gdt-effect">
+												+ Research
+											</span>
+											<span class="gdt-effect">
+												+ Speed
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>Make Me Think!</td>
-										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K<span></td>
-										<td>+++ Research,+&nbsp;Technology, &nbsp;+&nbsp;Design,&nbsp;+ Speed</td>
+										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Design
+											</span>
+											<span class="gdt-effect">
+												+ Technology
+											</span>
+											<span class="gdt-effect">
+												+++ Research
+											</span>
+											<span class="gdt-effect">
+												+ Speed
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>Game Design for Pirates</td>
-										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K<span></td>
-										<td>+++ Design, + Technology, + Research</td>
+										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+++ Design
+											</span>
+											<span class="gdt-effect">
+												+ Technology
+											</span>
+											<span class="gdt-effect">
+												+ Research
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>Don't Repeat Yourself</td>
-										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K<span></td>
-										<td>+++ Speed,+ Research,&nbsp;+&nbsp;Technology, &nbsp;+&nbsp;Design</td>
+										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Design
+											</span>
+											<span class="gdt-effect">
+												+ Technology
+											</span>
+											<span class="gdt-effect">
+												+++ Speed
+											</span>
+										</td>
+
 									</tr>
 									<tr>
 										<td> Code Incomplete</td>
-										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K<span></td>
-										<td>+++ Technology, + Design, + Research</td>
+										<td><span class="gdt-rp">5</span>, <span class="gdt-cr">15K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Design
+											</span>
+											<span class="gdt-effect">
+												+++ Technology
+											</span>
+											<span class="gdt-effect">
+												+ Research
+											</span>
+										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 
 						<h3>G3 courses</h3>
+						<p>Capped at 700 points</p>
 						<div class="table-container">
 							<table>
 								<tbody>
@@ -151,34 +209,61 @@
 									</tr>
 									<tr>
 										<td>G3 Pixel Cup</td>
-										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K<span></td>
-										<td>+ Design</td>
+										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Design
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>G3 Code Jam</td>
-										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K<span></td>
-										<td>+ Technology</td>
+										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Technology
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>G3 Game Jam</td>
-										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K<span></td>
-										<td>+ Design, + Technology</td>
+										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Design
+											</span>
+											<span class="gdt-effect">
+												+ Technology
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>G3 Time Trials</td>
-										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K<span></td>
-										<td>+ Speed (Large Amount), + Research (Small Amount)</td>
+										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Research
+											</span>
+											<span class="gdt-effect">
+												+ Speed
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>G3 Innovation Challenge</td>
-										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K<span></td>
-										<td>+ Research</td>
+										<td><span class="gdt-rp">10</span>, <span class="gdt-cr">70K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												+ Research
+											</span>
+										</td>
 									</tr>
 								</tbody>
 							</table>
 						</div>
 
 						<h3>Teaching</h3>
+						<p>Capped at 900 points</p>
 						<div class="table-container">
 							<table>
 								<tbody>
@@ -189,23 +274,75 @@
 									</tr>
 									<tr>
 										<td>Game Design Course</td>
-										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K<span></td>
-										<td>85% Design 10% Technology 5% Research</td>
+										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												85% Design
+											</span>
+											<span class="gdt-effect">
+												10% Technology
+											</span>
+											<span class="gdt-effect">
+												5% Research
+											</span>
+											<span class="gdt-effect">
+												0% Speed
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>Programming Course</td>
-										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K<span></td>
-										<td>95% Technology 5% Design</td>
+										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												5% Design
+											</span>
+											<span class="gdt-effect">
+												95% Technology
+											</span>
+											<span class="gdt-effect">
+												0% Research
+											</span>
+											<span class="gdt-effect">
+												0% Speed
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>Product Management Course</td>
-										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K<span></td>
-										<td>90% Speed 10% Research</td>
+										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												5% Design
+											</span>
+											<span class="gdt-effect">
+												0% Technology
+											</span>
+											<span class="gdt-effect">
+												10% Research
+											</span>
+											<span class="gdt-effect">
+												90% Speed
+											</span>
+										</td>
 									</tr>
 									<tr>
 										<td>R&#38;D Course</td>
-										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K<span></td>
-										<td>100% Research</td>
+										<td><span class="gdt-rp">30</span>, <span class="gdt-cr">140K</span></td>
+										<td class="f-row">
+											<span class="gdt-effect">
+												0% Design
+											</span>
+											<span class="gdt-effect">
+												0% Technology
+											</span>
+											<span class="gdt-effect">
+												100% Research
+											</span>
+											<span class="gdt-effect">
+												0% Speed
+											</span>
+										</td>
 									</tr>
 								</tbody>
 							</table>
@@ -222,12 +359,12 @@
 									</tr>
 									<tr>
 										<td>Staff Management</td>
-										<td><span class="gdt-rp">0</span>, <span class="gdt-cr">25K<span></td>
+										<td><span class="gdt-rp">0</span>, <span class="gdt-cr">25K</span></td>
 										<td>Main character one time only. Allows hiring employees.</td>
 									</tr>
 									<tr>
 										<td>Staff Welcome Training</td>
-										<td><span class="gdt-rp">0</span>, <span class="gdt-cr">10K<span></td>
+										<td><span class="gdt-rp">0</span>, <span class="gdt-cr">10K</span></td>
 										<td>Employees one time only (each). Increases Efficiency from 0.05 upto 0.28</td>
 									</tr>
 								</tbody>
@@ -237,18 +374,19 @@
 				</main>
 
 				<!-- De footer van deze website -->
-				<footer class="site-footer f-center">
-					<small>
-						Created by Tom van Nimwegen and Wilfred van Eck, 2014.
-						<nav>
-							<ul class="f-space-around">
-								<li><a href="/sitemap">Sitemap</a></li>
-								<li><a href="/about">About</a></li>
-								<li><a href="/contact">Contact</a></li>
-								<li><a href="#top">Top</a></li>
-							</ul>
-						</nav>
-					</small>
+				<footer class="site-footer f-center font-small">
+					<nav>
+						<p>
+							Created by Tom van Nimwegen and Wilfred van Eck, 2014.
+						</p>
+						<ul class="f-space-around">
+							<li><a href="/sitemap">Sitemap</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a href="#top">Top</a></li>
+						</ul>
+					</nav>
+					
 				</footer>
 			</div>
 		</div>
