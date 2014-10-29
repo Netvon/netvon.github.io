@@ -35,8 +35,10 @@
 		<!-- Meta tags -->
 		<meta name="description" content="A wiki about GameDev Tycoon">
 		<meta name="keywords" content="wiki, gdt, gamedev, game, dev, tycoon">
-		<meta http-equiv="language" content="EN">
 		<meta name="author" content="Tom van Nimwegen, Wilfred van Eck">
+		<!-- JavaScript -->
+		<script src="js/jquery-1.11.1.min.js" type="text/javascript" charset="utf-8"></script>
+		<script src="js/main.js" type="text/javascript" charset="utf-8"></script>
 	</head>
 	<!-- Header end -->
 
@@ -48,7 +50,7 @@
 			<div class="site-container">
 				<!-- De header van de pagina met het menu -->
 				<header class="site-header">
-					<a name="top"></a>
+					<a id="top"></a>
 					<!-- Het menu van de pagina -->
 					<nav class="site-header-nav">
 						<ul class="f-space-between">
@@ -78,19 +80,6 @@
 							</li>
 						</ul>
 					</nav>
-
-					<!-- De dropdown versie van het menu, voor @media -->
-					<!-- <nav class="site-header-mnav"> 
-						<select onchange="location = this.options[this.selectedIndex].value;">
-							 <optgroup label="Wiki">
-								<option value="#">Themes</option>
-						 		<option value="#">Plugins</option>
-						 		<option value="#">Tutorials</option>
-						 	 </optgroup>
-							<option value="#">Mercedes</option>
-						 	<option value="#">Audi</option>
-						</select>
-					</nav> -->
 				</header>
 
 				<!-- De main content van de pagina, hier staan alle artikelen in -->
@@ -104,28 +93,29 @@
 								<li><a href="/achievements">Achievements</a></li>
 							</ul>
 						</nav>
-						<h2>Achievements</h2>	
 					</header>
 
 					<!-- Hieronder kunnen artikelen komen -->
 					<article>
+						<h2>Achievements</h2>
 						<pre>TODO:	Insert Achievements</pre>
 					</article>
 				</main>
 
 				<!-- De footer van deze website -->
-				<footer class="site-footer f-center">
-					<small>
-						Created by Tom van Nimwegen and Wilfred van Eck, 2014.
-						<nav>
-							<ul class="f-space-between">
-								<li><a href="/sitemap">Sitemap</a></li>
-								<li><a href="/about">About</a></li>
-								<li><a href="/contact">Contact</a></li>
-								<li><a href="#top">Top</a></li>
-							</ul>
-						</nav>
-					</small>
+				<footer class="site-footer f-center font-small">
+					<nav>
+						<p>
+							Created by Tom van Nimwegen and Wilfred van Eck, 2014.
+						</p>
+						<ul class="f-space-around">
+							<li><a href="/sitemap">Sitemap</a></li>
+							<li><a href="/about">About</a></li>
+							<li><a href="/contact">Contact</a></li>
+							<li><a href="#top">Top</a></li>
+						</ul>
+					</nav>
+					
 				</footer>
 			</div>
 		</div>
