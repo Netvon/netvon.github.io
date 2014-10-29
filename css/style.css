@@ -289,6 +289,8 @@ small,
 /*===============================================================*/
 .page-content div.index-box
 {
+	-webkit-transition: all 0.3s ease;
+	        transition: all 0.3s ease;
 	-webkit-box-flex: 1;
 	-webkit-flex: 1 100px;
 	    -ms-flex: 1 100px;
@@ -296,6 +298,14 @@ small,
 	border: 0.1rem solid rgb(215, 215, 215);
 	margin: 0.9rem;
 	padding: 0.9rem;
+}
+
+.page-content div.index-box:hover
+{
+	-webkit-box-flex: 1;
+	-webkit-flex: 1 150px;
+	    -ms-flex: 1 150px;
+	        flex: 1 150px;
 }
 
 .page-content h3
@@ -565,6 +575,11 @@ small,
 	list-style: inside;
 	margin-left: 1.8rem;
 	margin-right: 1.8rem;
+}
+
+.page-content img
+{
+	width: 100%;
 }
 
 /*===============================================================*/
