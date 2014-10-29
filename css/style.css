@@ -584,7 +584,7 @@ small,
 
 .page-content table img
 {
-	width: initial;
+	width: inherit;
 }
 
 /*===============================================================*/
