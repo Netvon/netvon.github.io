@@ -73,12 +73,13 @@
 		body
 		{
 			font-family: 'Open Sans', sans-serif;
-			color: #0b0c0c;
-			/*background-color: #fafafa;*/
-			background-color: rgba(147,128,108,.1);
+			color: #D0D0D0;
+			background-color: #18191B;
+			/*background-color: rgba(147,128,108,.1);*/
 			min-height: 100vh;
 			font-size: 1.8rem;
 			line-height: 2.6rem;
+			border-top: 5px solid #00AF7E;
 
 			/*background: url(scr01.png) no-repeat center center fixed;
 			-webkit-background-size: cover;
@@ -92,8 +93,8 @@
 			transition: all 0.2s ease;
 			position: relative;
 			top: 0;
-			color: #d8262d;
-			border-bottom: 0.1rem solid rgba(216, 38, 45, 0.23);
+			color: #00AF7E;
+			border-bottom: 0.1rem solid rgb(0, 175, 126);
 
 		}
 
@@ -377,6 +378,7 @@
 		{
 			height: 4.4rem;
 			width: 10.0rem;
+			fill: #BFC1C3;
 		}
 
 		#site-search-icon,
@@ -433,7 +435,7 @@
 */
 		.page-content
 		{
-		  	background-color: white;
+		  	background-color: black;
 
 			-webkit-box-flex: auto 1;
 			-webkit-flex: auto 1;
@@ -530,13 +532,14 @@
 			padding: 0.4rem;
 			font-size: 1.6rem;
 			background-color: #f4eda6;
-			color: #433f2e;
+			/*color: #433f2e;*/
 			font-family: "Lucida Console", Monaco, monospace;
 		}
 
-		.article-container pre > code
+		.article-container pre > code,
+		.article-container blockquote
 		{
-			background-color: #f4eda6;
+			background-color: rgb(24, 25, 27);
 			/*box-sizing: border-box;*/
 			/*border: 0.5rem solid white;*/
 			/*outline: white solid 0.5rem;*/
@@ -618,7 +621,7 @@
 
 		.article-footer
 		{
-			border-bottom: 0.2rem solid rgba(0, 0, 0, 0.14);
+			border-bottom: 0.2rem solid rgb(0, 175, 126);
 			margin: 1.8rem -1.8rem 1.8rem -1.8rem;
 			padding: 0 1.8rem 1.8rem;
 			color: #666666;
@@ -670,7 +673,7 @@
 			color: #666666;
 		  /*background-color: white;*/
 		  /*min-height: 40px;*/
-		  border-top: 0.2rem solid rgba(0, 0, 0, 0.14);
+		  /*border-top: 0.2rem solid rgba(0, 0, 0, 0.14)*/;
 		  font-size: 1.26rem;
 		  padding: 1.8rem;
 		  text-align: center;
@@ -678,11 +681,6 @@
 
 		@media all and (max-width: 960px)
 		{
-			.page-content
-			{
-				text-align: justify;
-			}
-
 			.site-header
 			{
 				padding: 0 1.8rem 0 1.8rem;
